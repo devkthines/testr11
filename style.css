@@ -1,0 +1,48 @@
+.accordion-button:after {
+    background-image: url("https://drive.google.com/uc?export=view&id=1diXaRHOkcB1L2YDEXSs4oIc37I8EjuW9");
+}
+.accordion-item{
+    border-bottom: 2px solid black;
+    border-top: 2px solid black; 
+}
+.accordion-button {
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    font-size: 24px;
+    border: none;
+    flex-direction: row-reverse;
+    justify-content: start;
+    padding-left: 8px;
+    /* align-items: center; */
+}
+
+.accordion-button:focus {
+    color: black;
+
+}
+
+.accordion-button:after {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Collapsed icon */
+.accordion-button:not(.collapsed)::after {
+    background-image: url("https://drive.google.com/uc?export=view&id=1LHTXijDnATGmBQABU2X6ZOtnNXZAd46T");
+    background-color: transparent;
+}
+
+/* Text next to collapsed icon */
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    text-shadow: 0 0 3px yellow;
+}
+
+/* Remove border when button is focused */
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/* Remove border when button is not focused */

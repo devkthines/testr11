@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+             *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+
+}
+body{
+    height: 100vh;
+    overflow-y: auto;
+}
+#story h1{
+    background-color: #FFFD00;
+    text-align: center;
+    padding: 20px;
+    font-size: 48px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.accordion-button {
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    flex-direction: row-reverse;
+    justify-content: start;
+    padding-left: 8px;
+    /* align-items: center; */
+}
+
+.accordion-button:focus {
+    color: black;
+
+}
+
+.accordion-button:after {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.accordion-button:active {
+      color: #FEBE10;
+
+    }
+/* Collapsed icon */
+
+.accordion-button:not(.collapsed)::after {
+    /* background-image: url("https://drive.google.com/uc?export=view&id=1K3PCsePav60Ob5LWrua-IuqS4FcaRM5g");
+    background-color: transparent; */
+    color: #FEBE10;
+}
+
+/* Text next to collapsed icon */
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    /* text-shadow: 0 0 3px #FFFD00;
+     */
+     color: #FEBE10;
+}
+
+/* Remove border when button is focused */
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+
+
+@media (max-width: 576px) {
+  .accordion-body {
+    font-size: 14px;
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px; 
+  }
+  .accordion-body {
+    padding: 0.25rem;
+  }
+  
+  .accordion-button {
+    padding: 0.5rem 0.75rem;
+  }
+}
+/* Remove border when button is not focused */
+    </style>
+</head>
+
+<body>
+        <main id="faqs" class="container-fluid">
+            <div id="story">
+                <h1>FAQs</h1>
+              </div>
+              <br>
+            <div class="accordion accordion-flush d-flex flex-column flex-wrap" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            What are your store hours?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Please refer to store locator for store hours . Store hours maybe limited on Thanksgiving
+                                and
+                                Christmas Eve. All stores are closed Christmas day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                             How do I find specials at my local store?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>You will find savings throughout our store with our everyday low prices. For additional
+                                savings look for our Wall of Values and Temporary Price Reductions, indicated by a green
+                                tag. We also accept coupons (restrictions apply, check our Coupon Policy for details).
+                                Visit
+                                the Savings tab of our website for circulars and coupons that may be available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                             How do I apply for a job?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Check your nearest location for job openings or call our Job Hotline at 209.957.2555
+                                x173</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                             Where can I buy a Food 4 Less gift card?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Gift Cards are available in the check stands at all of our locations and make a great
+                                gift
+                                for
+                                any occasion. Gift Cards may be purchased for any denomination from $5-$500. California
+                                State
+                                Laws regarding Gift Cards apply.
+
+                                To order Gift Cards in bulk please contact our Retail Support Center at 209.957.4917 for
+                                details.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                             Where can I use my Food 4 Less gift Card?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Please visit the Store Locator section of our website for participating locations. You
+                                may
+                                also
+                                use your gift card at Rancho San Miguel Markets. Please visit myfood4less.com for store
+                                locations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse5" aria-expanded="false"
+                            aria-controls="flush-collapse5">
+                             Can I return an item that I am not satisfied with?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse5" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Yes. Please bring in the unused portion of the product, original packaging and original
+                                receipt,
+                                at your earliest convenience. This will allow us to determine how to best resolve the
+                                issue.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                             Can I return a perishable item?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Yes. You may return your perishable item if the product does not meet quality standards.
+                                Please
+                                bring the original packaging, as much of the product as possible and the original
+                                receipt.
+                                We
+                                will do our best to ensure customer satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+                             Can I return Alcohol or Tobacco products?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse7" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>These items may be returned at the discretion of the Store Director.
+                                Each individual situation will be assessed. California State Laws apply.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+                             Do you need a membership to shop at Food 4 Less?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse8" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>No! There is no club card and no membership needed; just everyday
+                                low
+                                prices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+                            Do you have electric carts available for customers with a disability, are elderly or have
+                             injuries?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse9" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Yes, each of our locations provides electric carts for our
+                                customer&apos;s convenience. These carts are available on a first come, first serve
+                                basis
+                                and
+                                can be found at the inside of the entrance area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
+                            Can I bring my pet into the store?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse10" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Food 4 Less allows service animals inside the store, any other
+                                animal is
+                                not allowed.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
+                             Do you accept WIC and SNAP EBT as a form of payment?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse11" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Yes, Food 4 Less gladly welcomes WIC and SNAP EBT transactions as a
+                                form
+                                of payment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse12" aria-expanded="false" aria-controls="flush-collapse12">
+                             How I can be added to your mailing list?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse12" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>From time to time, Food 4 Less will mail out a circular packed with
+                                additional savings. If you would like to make sure you are receiving our special
+                                circulars,
+                                please register online and you will receive the circular right to your email inbox.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapse13">
+                            Does Food 4 Less offer online coupons?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse13" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Yes! Visit the Coupon section of our website for current offers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14">
+                             What is your coupon policy?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse14" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p><strong>Food 4 Less gladly accepts manufacturers&apos; coupons where all of the following
+                                    apply:</strong></p>
+                            <p><strong>Manufacturers&apos; Coupons</strong></p>
+                            <p>• Free product coupons (except those printed from the Internet)<br>• Buy one; get one
+                                free (BOGO) coupons<br>• Must have “Manufacturer Coupon” printed on them<br>• Must have
+                                a valid expiration date<br>• Must have a scannable bar code<br>• One coupon per
+                                item<br>• Restrictions and requirements listed on the coupon are met. This includes but
+                                is not limited to: quantities (minimum required and maximum allowed), sizes, brand
+                                names, product variety, expiration dates, and store location<br>• Soft drink container
+                                caps</p>
+                            <p><strong>Internet Coupons</strong></p>
+                            <p>• Must be legible<br>• Must have “Manufacturer Coupon” printed on them<br>• Must have a
+                                valid remit address for the manufacturer<br>• Must have a valid expiration date<br>•
+                                Must have a scannable bar code<br>• Buy one, get one free (BOGO) coupons with a
+                                specified price<br>• May not be duplicated</p>
+                            <p><strong>Guidelines and Limitations</strong></p>
+                            <p>• Food 4 Less stores do not double or triple coupons; if a coupon has been used with an
+                                item, no other coupon may be used with that item and no other item may benefit from that
+                                coupon.<br>• Food 4 Less stores &nbsp;only accept coupons for merchandise that we
+                                sell<br>• Coupons must be presented at the time of purchase<br>• Only one coupon per
+                                item<br>• Item purchased must be identical to the description on the coupon (size,
+                                quantity,&nbsp;brand, flavor, color, etc.)<br>• There is no limit on the number of
+                                coupons that may be used per transaction<br>• SNAP items purchased in a SNAP transaction
+                                are ineligible for cash back<br>• WIC items purchased in a WIC transaction are applied
+                                to the basket purchase and<br>&nbsp; may not be eligible for cash back. Refer to
+                                state-specific WIC guidelines<br>• Food 4 Less stores have the right to reject coupons
+                                that have an altered or torn&nbsp;expiration date<br>• Food 4 Less stores will not
+                                accept coupons that have been duplicated, appear blurry&nbsp;or altered in anyway<br>•
+                                Food 4 Less stores will not accept competitors coupons<br>• Food 4 Less does not accept
+                                internet competitor&apos;s coupons.<br>• Coupons are to be accepted for their intended
+                                purpose and may not be accepted or&nbsp;exchanged for cash<br>• Coupons cannot be
+                                purchased, sold or transferred<br>• Customers are responsible for all sales tax and CRV
+                            </p>
+                            <p><strong>We do not accept the following coupons:</strong></p>
+                            <p>• Food 4 Less stores do not accept competitor&apos;s coupons.<br>• Coupons that do not
+                                scan
+                                properly.<br>• No cash back for coupons with a higher value than the items&apos;
+                                purchase
+                                price.<br>• Internet coupons that do not require a purchase, “Free”<br>• Internet
+                                coupons with a redemption value exceeding $6.00<br>• Food 4 Less stores&nbsp;do not
+                                accept electronic coupons.<br>• No photocopied or visibly altered coupons<br>• Food 4
+                                Less stores will not accept checkout coupons</p>
+                            <p><strong>Food 4 Less reserves the right to deny any coupon at any time.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse15" aria-expanded="false" aria-controls="flush-collapse15">
+                             Does Food 4 Less accept credit cards?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse15" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Food 4 Less accepts Visa, Mastercard and Discover at all locations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse16" aria-expanded="false" aria-controls="flush-collapse16">
+                             Why does Food 4 Less not bag groceries?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse16" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                In order to pass on every possible savings, Food 4 Less customers bag their own
+                                groceries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse17" aria-expanded="false" aria-controls="flush-collapse17">
+                             Can I use a check to pay for my purchase?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse17" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <h6>Food 4 Less gladly accepts personal checks for the purchase of merchandise upon the
+                                condition that our Check Writing Policy guidelines below are met.</h6>
+                            <ol>
+                                <li>Customer must have a valid California Driver&apos;s License</li>
+                                <li>Check must be for exact amount of purchase</li>
+                                <li>Customer must provide a home and work/alternate phone number</li>
+                                <li>Check must have customers printed physical address</li>
+                                <li>Check must have customers name pre-printed</li>
+                                <li>Travelers checks are accepted with a minimum of 80% of purchase</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse18" aria-expanded="false" aria-controls="flush-collapse18">
+                             What are the requirements for writing a check at Food 4 Less?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse18" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <h6>Food 4 Less gladly accepts personal checks for the purchase of merchandise upon the
+                                condition that our Check Writing Policy guidelines below are met.</h6>
+                            <ol>
+                                <li>Customer must have a valid California Driver&apos;s License</li>
+                                <li>Check must be for exact amount of purchase</li>
+                                <li>Customer must provide a home and work/alternate phone number</li>
+                                <li>Check must have customers printed physical address</li>
+                                <li>Check must have customers name pre-printed</li>
+                                <li>Travelers checks are accepted with a minimum of 80% of purchase</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse19" aria-expanded="false" aria-controls="flush-collapse19">
+                             What types of checks are not accepted at Food 4 Less?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse19" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Government Checks<ul>
+                                        <li>Social Security/Welfare Checks</li>
+                                    </ul>
+                                </li>
+                                <li>Unemployment Checks</li>
+                                <li>Out of Area/State Checks</li>
+                                <li>Finance or Loan Company Checks</li>
+                                <li>Payroll Checks</li>
+                                <li>Money Orders</li>
+                                <li>Checks with a P.O. Box Number listed as primary address</li>
+                                <li>Two Party Checks</li>
+                                <li>Cashier&apos;s checks</li>
+                                <li>Unprinted Checks</li>
+                                <li>Checks with unreadable magnetic ink numbers</li>
+                                <li>Post Dated Checks</li>
+                                <li>Insurance Settlement Checks</li>
+                                <li>Checks Without Preprinted Name<ul>
+                                        <li>Counter checks</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse20" aria-expanded="false" aria-controls="flush-collapse20">
+                            Can I write a check over the total amount?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse20" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Checks are limited to the amount of the purchase.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse21" aria-expanded="false" aria-controls="flush-collapse21">
+                             I received a letter/phone call regarding my check bouncing at one of your locations,
+                                how do
+                                I
+                                resolve this issue?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse21" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Please visit the store nearest you and ask for a front end manager prior to the
+                                COLLECTION
+                                DATE
+                                stated on correspondence. They can assist you with making a payment and resolving the
+                                issue.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse22" aria-expanded="false" aria-controls="flush-collapse22">
+                             Do you sell money orders or offer other money services?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse22" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Yes.&nbsp; Western Unions Services are available at the following location(s):</p>
+                            <ul>
+                                <li>
+                                    <div>Los Banos-At the Service Counter</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse23" aria-expanded="false" aria-controls="flush-collapse23">
+                             What types of Western Unions Services do you offer?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse23" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <div>Money Transfers</div>
+                                </li>
+                                <li>Bill Payments</li>
+                                <li>Money Orders</li>
+                                <li>Prepaid</li>
+                            </ul>
+                            <p>See store for service fees and details.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse24" aria-expanded="false" aria-controls="flush-collapse24">
+                             Is there an ATM inside the store?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse24" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Yes, an ATM machine is conveniently located at all Food 4 Less
+                                stores.
+                                Service fees apply.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse25" aria-expanded="false" aria-controls="flush-collapse25">
+                            I&apos;m a vendor, how can I schedule a meeting with a Food 4 Less buyer to discuss my
+                                product?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse25" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Please complete a Customer Comment Form and a team member will
+                                contact
+                                you, to schedule a meeting, if the product described is a fit for our stores.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse26" aria-expanded="false" aria-controls="flush-collapse26">
+                             I would like to setup a sales table in front of your store or in your parking lot to
+                                solicit
+                                my
+                                product? (Examples: cookies, popcorn, event tickets, personal care products, services,
+                                etc.)
+                        </button>
+                    </h2>
+                    <div id="flush-collapse26" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Food 4 Less abides by a strict No Solicitation Policy that covers
+                                all of
+                                our locations, parking lots and all property owned, managed or operated by our company.
+                                This
+                                policy is set in place to protect our customers, staff and visitors from unwanted
+                                solicitations.
+                                No exceptions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse27" aria-expanded="false" aria-controls="flush-collapse27">
+                            Why can&apos;t I get a price over the phone or via email?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse27" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>In order to ensure that our prices are the best in town, we price
+                                check
+                                our competition weekly and sometimes adjust prices daily! Due to this, our prices are
+                                subject to
+                                change at any time therefore we are not able to provide prices over the phone or via
+                                email.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse28" aria-expanded="false" aria-controls="flush-collapse28">
+                            How can I apply for a donation or sponsorship?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse28" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Visit the Community section of our website for restrictions and
+                                details.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse29" aria-expanded="false" aria-controls="flush-collapse29">
+                            Where can I find information about product recalls?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse29" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Food 4 Less is committed to your safety. From time to time there are
+                                government recalls of products and we want to quickly and conveniently share the details
+                                with
+                                you. If such an occasion occurs, you&apos;ll find additional details in the Recall
+                                section
+                                of
+                                our website.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse30" aria-expanded="false" aria-controls="flush-collapse30">
+                            Do you have a commitment to a Cage-Free egg supply chain?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse30" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>PAQ, Inc. Cage-Free Goal by 2025
+
+                                PAQ Inc. plans to transition to a 100 percent Cage-Free egg supply chain, based on
+                                availability
+                                and affordability by 2025. All retail banners of PAQ, Inc. will be covered by this
+                                commitment,
+                                Food 4 Less and Rancho San Miguel Markets.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse31" aria-expanded="false" aria-controls="flush-collapse31">
+                             I have a question about my Instacart service or order.
+                        </button>
+                    </h2>
+                    <div id="flush-collapse31" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Instacart is a third party service provider. If you have any questions about your
+                                service or
+                                order or would like to know Frequently Asked Questions (FAQs) about Instacart, please:
+                            </p>
+
+                            <a href="https://www.instacart.com/help?_ga=2.27868412.1795867632.1528408830-949830300.1528408830"
+                                target="_blank">
+                                <p>HERE</p>
+                            </a>
+                            <p> to visit the Instacart Help Center,
+
+                                or copy and paste www.instacart.com/help in to your internet browser address bar. You
+                                can
+                                also
+                                email help@instacart.com or call 1 (888) 246-7822</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
